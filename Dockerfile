@@ -2,6 +2,8 @@ FROM ubuntu:xenial
 ARG MINIKUBE_VERSION=v0.25.2
 ARG KUBERNETES_VERSION=v1.9.4
 
+# Additional options for `minikube start`, e.g. `--cpu 4 --memory 4096`
+ENV MINIKUBE_START_FLAGS ""
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -q update && \
   apt-get -q -y install --no-install-recommends libvirt-bin qemu-kvm curl ca-certificates sudo && \

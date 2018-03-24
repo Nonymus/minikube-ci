@@ -14,6 +14,6 @@ export CHANGE_MINIKUBE_NONE_USER=true
 mkdir $HOME/.kube || true
 touch $HOME/.kube/config
 
-minikube start --vm-driver kvm2
+minikube start --vm-driver kvm2 $MINIKUBE_START_FLAGS
 
 exec "$@"
